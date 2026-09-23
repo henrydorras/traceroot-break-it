@@ -1,0 +1,298 @@
+[
+  {
+    "traceId": "b7a2c84f35f055511655910673dcc4fd",
+    "spanId": "ceabff1a37b30a04",
+    "parentSpanId": "2146c9aaafd3135c",
+    "name": "scripted_model",
+    "kind": "SPAN_KIND_INTERNAL",
+    "startTimeUnixNano": "1790160293887387009",
+    "endTimeUnixNano": "1790160293887551912",
+    "attributes": [
+      {
+        "key": "traceroot.sdk.name",
+        "value": {
+          "stringValue": "traceroot-py"
+        }
+      },
+      {
+        "key": "traceroot.sdk.version",
+        "value": {
+          "stringValue": "0.1.2"
+        }
+      },
+      {
+        "key": "traceroot.span.type",
+        "value": {
+          "stringValue": "llm"
+        }
+      },
+      {
+        "key": "traceroot.span.input",
+        "value": {
+          "stringValue": "{\"messages\": [{\"role\": \"system\", \"content\": \"You are a support agent for a watch shop. Use tools to answer.\"}, {\"role\": \"user\", \"content\": \"Hi, where's my order ORD-1042? I'd like a refund if it's lost.\"}]}"
+        }
+      },
+      {
+        "key": "traceroot.git.source_file",
+        "value": {
+          "stringValue": "agent.py"
+        }
+      },
+      {
+        "key": "traceroot.git.source_line",
+        "value": {
+          "intValue": "183"
+        }
+      },
+      {
+        "key": "traceroot.git.source_function",
+        "value": {
+          "stringValue": "support_agent"
+        }
+      },
+      {
+        "key": "traceroot.git.repo",
+        "value": {
+          "stringValue": "r7j2grgkfd-lang/traceroot-break-it"
+        }
+      },
+      {
+        "key": "traceroot.span.output",
+        "value": {
+          "stringValue": "{\"name\": \"issue_refund\", \"args\": {\"order_id\": \"ORD-1024\", \"amount\": 19.99}}"
+        }
+      }
+    ],
+    "status": {},
+    "flags": 256,
+    "resource": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.44.0",
+      "service.instance.id": "55b38875-e8a5-45e2-ade3-457de0c1b316",
+      "service.name": "support-agent-demo"
+    }
+  },
+  {
+    "traceId": "b7a2c84f35f055511655910673dcc4fd",
+    "spanId": "a38a76cfa04958d4",
+    "parentSpanId": "2146c9aaafd3135c",
+    "name": "issue_refund",
+    "kind": "SPAN_KIND_INTERNAL",
+    "startTimeUnixNano": "1790160293887625369",
+    "endTimeUnixNano": "1790160293887702745",
+    "attributes": [
+      {
+        "key": "traceroot.sdk.name",
+        "value": {
+          "stringValue": "traceroot-py"
+        }
+      },
+      {
+        "key": "traceroot.sdk.version",
+        "value": {
+          "stringValue": "0.1.2"
+        }
+      },
+      {
+        "key": "traceroot.span.type",
+        "value": {
+          "stringValue": "tool"
+        }
+      },
+      {
+        "key": "traceroot.span.input",
+        "value": {
+          "stringValue": "{\"order_id\": \"ORD-1024\", \"amount\": 19.99}"
+        }
+      },
+      {
+        "key": "traceroot.git.source_file",
+        "value": {
+          "stringValue": "agent.py"
+        }
+      },
+      {
+        "key": "traceroot.git.source_line",
+        "value": {
+          "intValue": "188"
+        }
+      },
+      {
+        "key": "traceroot.git.source_function",
+        "value": {
+          "stringValue": "support_agent"
+        }
+      },
+      {
+        "key": "traceroot.git.repo",
+        "value": {
+          "stringValue": "r7j2grgkfd-lang/traceroot-break-it"
+        }
+      },
+      {
+        "key": "traceroot.span.output",
+        "value": {
+          "stringValue": "{\"order_id\": \"ORD-1024\", \"refunded\": 19.99, \"status\": \"ok\"}"
+        }
+      }
+    ],
+    "status": {},
+    "flags": 256,
+    "resource": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.44.0",
+      "service.instance.id": "55b38875-e8a5-45e2-ade3-457de0c1b316",
+      "service.name": "support-agent-demo"
+    }
+  },
+  {
+    "traceId": "b7a2c84f35f055511655910673dcc4fd",
+    "spanId": "6c4e6cad77480019",
+    "parentSpanId": "2146c9aaafd3135c",
+    "name": "scripted_model",
+    "kind": "SPAN_KIND_INTERNAL",
+    "startTimeUnixNano": "1790160293887757664",
+    "endTimeUnixNano": "1790160293887851208",
+    "attributes": [
+      {
+        "key": "traceroot.sdk.name",
+        "value": {
+          "stringValue": "traceroot-py"
+        }
+      },
+      {
+        "key": "traceroot.sdk.version",
+        "value": {
+          "stringValue": "0.1.2"
+        }
+      },
+      {
+        "key": "traceroot.span.type",
+        "value": {
+          "stringValue": "llm"
+        }
+      },
+      {
+        "key": "traceroot.span.input",
+        "value": {
+          "stringValue": "{\"messages\": [{\"role\": \"system\", \"content\": \"You are a support agent for a watch shop. Use tools to answer.\"}, {\"role\": \"user\", \"content\": \"Hi, where's my order ORD-1042? I'd like a refund if it's lost.\"}, {\"role\": \"tool\", \"name\": \"issue_refund\", \"content\": \"{\\\"order_id\\\": \\\"ORD-1024\\\", \\\"refunded\\\": 19.99, \\\"status\\\": \\\"ok\\\"}\"}]}"
+        }
+      },
+      {
+        "key": "traceroot.git.source_file",
+        "value": {
+          "stringValue": "agent.py"
+        }
+      },
+      {
+        "key": "traceroot.git.source_line",
+        "value": {
+          "intValue": "183"
+        }
+      },
+      {
+        "key": "traceroot.git.source_function",
+        "value": {
+          "stringValue": "support_agent"
+        }
+      },
+      {
+        "key": "traceroot.git.repo",
+        "value": {
+          "stringValue": "r7j2grgkfd-lang/traceroot-break-it"
+        }
+      },
+      {
+        "key": "traceroot.span.output",
+        "value": {
+          "stringValue": "{\"text\": \"Done - refunded \\u00a319.99 to order ORD-1024.\"}"
+        }
+      }
+    ],
+    "status": {},
+    "flags": 256,
+    "resource": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.44.0",
+      "service.instance.id": "55b38875-e8a5-45e2-ade3-457de0c1b316",
+      "service.name": "support-agent-demo"
+    }
+  },
+  {
+    "traceId": "b7a2c84f35f055511655910673dcc4fd",
+    "spanId": "2146c9aaafd3135c",
+    "name": "support_agent",
+    "kind": "SPAN_KIND_INTERNAL",
+    "startTimeUnixNano": "1790160293875014056",
+    "endTimeUnixNano": "1790160293887866113",
+    "attributes": [
+      {
+        "key": "traceroot.sdk.name",
+        "value": {
+          "stringValue": "traceroot-py"
+        }
+      },
+      {
+        "key": "traceroot.sdk.version",
+        "value": {
+          "stringValue": "0.1.2"
+        }
+      },
+      {
+        "key": "traceroot.span.type",
+        "value": {
+          "stringValue": "agent"
+        }
+      },
+      {
+        "key": "traceroot.span.input",
+        "value": {
+          "stringValue": "{\"question\": \"Hi, where's my order ORD-1042? I'd like a refund if it's lost.\", \"model\": {\"chat\": {\"__wrapped__\": {}}}}"
+        }
+      },
+      {
+        "key": "traceroot.git.source_file",
+        "value": {
+          "stringValue": "agent.py"
+        }
+      },
+      {
+        "key": "traceroot.git.source_line",
+        "value": {
+          "intValue": "223"
+        }
+      },
+      {
+        "key": "traceroot.git.source_function",
+        "value": {
+          "stringValue": "main"
+        }
+      },
+      {
+        "key": "traceroot.git.repo",
+        "value": {
+          "stringValue": "r7j2grgkfd-lang/traceroot-break-it"
+        }
+      },
+      {
+        "key": "traceroot.span.output",
+        "value": {
+          "stringValue": "Done - refunded \u00a319.99 to order ORD-1024."
+        }
+      }
+    ],
+    "status": {},
+    "flags": 256,
+    "parentSpanId": "",
+    "resource": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.44.0",
+      "service.instance.id": "55b38875-e8a5-45e2-ade3-457de0c1b316",
+      "service.name": "support-agent-demo"
+    }
+  }
+]

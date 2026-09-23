@@ -1,0 +1,342 @@
+[
+  {
+    "traceId": "a83618b2ae4952c32fed896fe6bbba88",
+    "spanId": "8054488ac2c36093",
+    "parentSpanId": "3acf17a42e03bb55",
+    "name": "scripted_model",
+    "kind": "SPAN_KIND_INTERNAL",
+    "startTimeUnixNano": "1790160290218709815",
+    "endTimeUnixNano": "1790160290218883347",
+    "attributes": [
+      {
+        "key": "traceroot.sdk.name",
+        "value": {
+          "stringValue": "traceroot-py"
+        }
+      },
+      {
+        "key": "traceroot.sdk.version",
+        "value": {
+          "stringValue": "0.1.2"
+        }
+      },
+      {
+        "key": "traceroot.span.type",
+        "value": {
+          "stringValue": "llm"
+        }
+      },
+      {
+        "key": "traceroot.span.input",
+        "value": {
+          "stringValue": "{\"messages\": [{\"role\": \"system\", \"content\": \"You are a support agent for a watch shop. Use tools to answer.\"}, {\"role\": \"user\", \"content\": \"Hi, where's my order ORD-1042? I'd like a refund if it's lost.\"}]}"
+        }
+      },
+      {
+        "key": "traceroot.git.source_file",
+        "value": {
+          "stringValue": "agent.py"
+        }
+      },
+      {
+        "key": "traceroot.git.source_line",
+        "value": {
+          "intValue": "183"
+        }
+      },
+      {
+        "key": "traceroot.git.source_function",
+        "value": {
+          "stringValue": "support_agent"
+        }
+      },
+      {
+        "key": "traceroot.git.repo",
+        "value": {
+          "stringValue": "r7j2grgkfd-lang/traceroot-break-it"
+        }
+      },
+      {
+        "key": "traceroot.span.output",
+        "value": {
+          "stringValue": "{\"name\": \"lookup_order\", \"args\": {\"order_id\": \"ORD-1042\"}}"
+        }
+      }
+    ],
+    "status": {},
+    "flags": 256,
+    "resource": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.44.0",
+      "service.instance.id": "22025160-cb84-46c0-8d11-e566e010c836",
+      "service.name": "support-agent-demo"
+    }
+  },
+  {
+    "traceId": "a83618b2ae4952c32fed896fe6bbba88",
+    "spanId": "7be2872fefa24af4",
+    "parentSpanId": "3acf17a42e03bb55",
+    "name": "lookup_order",
+    "kind": "SPAN_KIND_INTERNAL",
+    "startTimeUnixNano": "1790160290218959066",
+    "endTimeUnixNano": "1790160290220339313",
+    "attributes": [
+      {
+        "key": "traceroot.sdk.name",
+        "value": {
+          "stringValue": "traceroot-py"
+        }
+      },
+      {
+        "key": "traceroot.sdk.version",
+        "value": {
+          "stringValue": "0.1.2"
+        }
+      },
+      {
+        "key": "traceroot.span.type",
+        "value": {
+          "stringValue": "tool"
+        }
+      },
+      {
+        "key": "traceroot.span.input",
+        "value": {
+          "stringValue": "{\"order_id\": \"ORD-1042\"}"
+        }
+      },
+      {
+        "key": "traceroot.git.source_file",
+        "value": {
+          "stringValue": "agent.py"
+        }
+      },
+      {
+        "key": "traceroot.git.source_line",
+        "value": {
+          "intValue": "188"
+        }
+      },
+      {
+        "key": "traceroot.git.source_function",
+        "value": {
+          "stringValue": "support_agent"
+        }
+      },
+      {
+        "key": "traceroot.git.repo",
+        "value": {
+          "stringValue": "r7j2grgkfd-lang/traceroot-break-it"
+        }
+      }
+    ],
+    "events": [
+      {
+        "timeUnixNano": "1790160290219647644",
+        "name": "exception",
+        "attributes": [
+          {
+            "key": "exception.type",
+            "value": {
+              "stringValue": "KeyError"
+            }
+          },
+          {
+            "key": "exception.message",
+            "value": {
+              "stringValue": "'customer_email'"
+            }
+          },
+          {
+            "key": "exception.stacktrace",
+            "value": {
+              "stringValue": "Traceback (most recent call last):\n  File \"/home/user/.local/lib/python3.14/site-packages/traceroot/decorators.py\", line 199, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/home/user/workspace/traceroot-break-it/agent.py\", line 58, in lookup_order\n    contact = order[\"customer_email\"]\n              ~~~~~^^^^^^^^^^^^^^^^^^\nKeyError: 'customer_email'\n"
+            }
+          },
+          {
+            "key": "exception.escaped",
+            "value": {
+              "stringValue": "False"
+            }
+          }
+        ]
+      },
+      {
+        "timeUnixNano": "1790160290220321539",
+        "name": "exception",
+        "attributes": [
+          {
+            "key": "exception.type",
+            "value": {
+              "stringValue": "KeyError"
+            }
+          },
+          {
+            "key": "exception.message",
+            "value": {
+              "stringValue": "'customer_email'"
+            }
+          },
+          {
+            "key": "exception.stacktrace",
+            "value": {
+              "stringValue": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.14/site-packages/opentelemetry/trace/__init__.py\", line 608, in use_span\n    yield span\n  File \"/home/user/.local/lib/python3.14/site-packages/opentelemetry/sdk/trace/__init__.py\", line 1183, in start_as_current_span\n    yield span\n  File \"/home/user/.local/lib/python3.14/site-packages/traceroot/decorators.py\", line 199, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/home/user/workspace/traceroot-break-it/agent.py\", line 58, in lookup_order\n    contact = order[\"customer_email\"]\n              ~~~~~^^^^^^^^^^^^^^^^^^\nKeyError: 'customer_email'\n"
+            }
+          },
+          {
+            "key": "exception.escaped",
+            "value": {
+              "stringValue": "False"
+            }
+          }
+        ]
+      }
+    ],
+    "status": {
+      "message": "KeyError: 'customer_email'",
+      "code": "STATUS_CODE_ERROR"
+    },
+    "flags": 256,
+    "resource": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.44.0",
+      "service.instance.id": "22025160-cb84-46c0-8d11-e566e010c836",
+      "service.name": "support-agent-demo"
+    }
+  },
+  {
+    "traceId": "a83618b2ae4952c32fed896fe6bbba88",
+    "spanId": "3acf17a42e03bb55",
+    "name": "support_agent",
+    "kind": "SPAN_KIND_INTERNAL",
+    "startTimeUnixNano": "1790160290205662169",
+    "endTimeUnixNano": "1790160290221030957",
+    "attributes": [
+      {
+        "key": "traceroot.sdk.name",
+        "value": {
+          "stringValue": "traceroot-py"
+        }
+      },
+      {
+        "key": "traceroot.sdk.version",
+        "value": {
+          "stringValue": "0.1.2"
+        }
+      },
+      {
+        "key": "traceroot.span.type",
+        "value": {
+          "stringValue": "agent"
+        }
+      },
+      {
+        "key": "traceroot.span.input",
+        "value": {
+          "stringValue": "{\"question\": \"Hi, where's my order ORD-1042? I'd like a refund if it's lost.\", \"model\": {\"chat\": {\"__wrapped__\": {}}}}"
+        }
+      },
+      {
+        "key": "traceroot.git.source_file",
+        "value": {
+          "stringValue": "agent.py"
+        }
+      },
+      {
+        "key": "traceroot.git.source_line",
+        "value": {
+          "intValue": "223"
+        }
+      },
+      {
+        "key": "traceroot.git.source_function",
+        "value": {
+          "stringValue": "main"
+        }
+      },
+      {
+        "key": "traceroot.git.repo",
+        "value": {
+          "stringValue": "r7j2grgkfd-lang/traceroot-break-it"
+        }
+      }
+    ],
+    "events": [
+      {
+        "timeUnixNano": "1790160290220658665",
+        "name": "exception",
+        "attributes": [
+          {
+            "key": "exception.type",
+            "value": {
+              "stringValue": "KeyError"
+            }
+          },
+          {
+            "key": "exception.message",
+            "value": {
+              "stringValue": "'customer_email'"
+            }
+          },
+          {
+            "key": "exception.stacktrace",
+            "value": {
+              "stringValue": "Traceback (most recent call last):\n  File \"/home/user/.local/lib/python3.14/site-packages/traceroot/decorators.py\", line 199, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/home/user/workspace/traceroot-break-it/agent.py\", line 188, in support_agent\n    result = TOOLS[action.name](**action.args)\n  File \"/home/user/.local/lib/python3.14/site-packages/traceroot/decorators.py\", line 199, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/home/user/workspace/traceroot-break-it/agent.py\", line 58, in lookup_order\n    contact = order[\"customer_email\"]\n              ~~~~~^^^^^^^^^^^^^^^^^^\nKeyError: 'customer_email'\n"
+            }
+          },
+          {
+            "key": "exception.escaped",
+            "value": {
+              "stringValue": "False"
+            }
+          }
+        ]
+      },
+      {
+        "timeUnixNano": "1790160290221022675",
+        "name": "exception",
+        "attributes": [
+          {
+            "key": "exception.type",
+            "value": {
+              "stringValue": "KeyError"
+            }
+          },
+          {
+            "key": "exception.message",
+            "value": {
+              "stringValue": "'customer_email'"
+            }
+          },
+          {
+            "key": "exception.stacktrace",
+            "value": {
+              "stringValue": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.14/site-packages/opentelemetry/trace/__init__.py\", line 608, in use_span\n    yield span\n  File \"/home/user/.local/lib/python3.14/site-packages/opentelemetry/sdk/trace/__init__.py\", line 1183, in start_as_current_span\n    yield span\n  File \"/home/user/.local/lib/python3.14/site-packages/traceroot/decorators.py\", line 199, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/home/user/workspace/traceroot-break-it/agent.py\", line 188, in support_agent\n    result = TOOLS[action.name](**action.args)\n  File \"/home/user/.local/lib/python3.14/site-packages/traceroot/decorators.py\", line 199, in sync_wrapper\n    result = func(*args, **kwargs)\n  File \"/home/user/workspace/traceroot-break-it/agent.py\", line 58, in lookup_order\n    contact = order[\"customer_email\"]\n              ~~~~~^^^^^^^^^^^^^^^^^^\nKeyError: 'customer_email'\n"
+            }
+          },
+          {
+            "key": "exception.escaped",
+            "value": {
+              "stringValue": "False"
+            }
+          }
+        ]
+      }
+    ],
+    "status": {
+      "message": "KeyError: 'customer_email'",
+      "code": "STATUS_CODE_ERROR"
+    },
+    "flags": 256,
+    "parentSpanId": "",
+    "resource": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.44.0",
+      "service.instance.id": "22025160-cb84-46c0-8d11-e566e010c836",
+      "service.name": "support-agent-demo"
+    }
+  }
+]

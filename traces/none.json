@@ -1,0 +1,298 @@
+[
+  {
+    "traceId": "33bbaa18959f400873eaa89ae537c095",
+    "spanId": "e1cef7552c75c846",
+    "parentSpanId": "d40ceaeff6d90635",
+    "name": "scripted_model",
+    "kind": "SPAN_KIND_INTERNAL",
+    "startTimeUnixNano": "1790160288340706956",
+    "endTimeUnixNano": "1790160288340886055",
+    "attributes": [
+      {
+        "key": "traceroot.sdk.name",
+        "value": {
+          "stringValue": "traceroot-py"
+        }
+      },
+      {
+        "key": "traceroot.sdk.version",
+        "value": {
+          "stringValue": "0.1.2"
+        }
+      },
+      {
+        "key": "traceroot.span.type",
+        "value": {
+          "stringValue": "llm"
+        }
+      },
+      {
+        "key": "traceroot.span.input",
+        "value": {
+          "stringValue": "{\"messages\": [{\"role\": \"system\", \"content\": \"You are a support agent for a watch shop. Use tools to answer.\"}, {\"role\": \"user\", \"content\": \"Hi, where's my order ORD-1042? I'd like a refund if it's lost.\"}]}"
+        }
+      },
+      {
+        "key": "traceroot.git.source_file",
+        "value": {
+          "stringValue": "agent.py"
+        }
+      },
+      {
+        "key": "traceroot.git.source_line",
+        "value": {
+          "intValue": "183"
+        }
+      },
+      {
+        "key": "traceroot.git.source_function",
+        "value": {
+          "stringValue": "support_agent"
+        }
+      },
+      {
+        "key": "traceroot.git.repo",
+        "value": {
+          "stringValue": "r7j2grgkfd-lang/traceroot-break-it"
+        }
+      },
+      {
+        "key": "traceroot.span.output",
+        "value": {
+          "stringValue": "{\"name\": \"lookup_order\", \"args\": {\"order_id\": \"ORD-1042\"}}"
+        }
+      }
+    ],
+    "status": {},
+    "flags": 256,
+    "resource": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.44.0",
+      "service.instance.id": "ed02d8c8-293d-4dec-aeb8-0c983b110af8",
+      "service.name": "support-agent-demo"
+    }
+  },
+  {
+    "traceId": "33bbaa18959f400873eaa89ae537c095",
+    "spanId": "4d4468e76503c81c",
+    "parentSpanId": "d40ceaeff6d90635",
+    "name": "lookup_order",
+    "kind": "SPAN_KIND_INTERNAL",
+    "startTimeUnixNano": "1790160288340963149",
+    "endTimeUnixNano": "1790160288341054633",
+    "attributes": [
+      {
+        "key": "traceroot.sdk.name",
+        "value": {
+          "stringValue": "traceroot-py"
+        }
+      },
+      {
+        "key": "traceroot.sdk.version",
+        "value": {
+          "stringValue": "0.1.2"
+        }
+      },
+      {
+        "key": "traceroot.span.type",
+        "value": {
+          "stringValue": "tool"
+        }
+      },
+      {
+        "key": "traceroot.span.input",
+        "value": {
+          "stringValue": "{\"order_id\": \"ORD-1042\"}"
+        }
+      },
+      {
+        "key": "traceroot.git.source_file",
+        "value": {
+          "stringValue": "agent.py"
+        }
+      },
+      {
+        "key": "traceroot.git.source_line",
+        "value": {
+          "intValue": "188"
+        }
+      },
+      {
+        "key": "traceroot.git.source_function",
+        "value": {
+          "stringValue": "support_agent"
+        }
+      },
+      {
+        "key": "traceroot.git.repo",
+        "value": {
+          "stringValue": "r7j2grgkfd-lang/traceroot-break-it"
+        }
+      },
+      {
+        "key": "traceroot.span.output",
+        "value": {
+          "stringValue": "{\"order_id\": \"ORD-1042\", \"contact\": \"sam@example.com\", \"email\": \"sam@example.com\", \"item\": \"Casio F-91W\", \"total\": 19.99, \"status\": \"delivered\"}"
+        }
+      }
+    ],
+    "status": {},
+    "flags": 256,
+    "resource": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.44.0",
+      "service.instance.id": "ed02d8c8-293d-4dec-aeb8-0c983b110af8",
+      "service.name": "support-agent-demo"
+    }
+  },
+  {
+    "traceId": "33bbaa18959f400873eaa89ae537c095",
+    "spanId": "147edd36b41b4a93",
+    "parentSpanId": "d40ceaeff6d90635",
+    "name": "scripted_model",
+    "kind": "SPAN_KIND_INTERNAL",
+    "startTimeUnixNano": "1790160288341112791",
+    "endTimeUnixNano": "1790160288341208786",
+    "attributes": [
+      {
+        "key": "traceroot.sdk.name",
+        "value": {
+          "stringValue": "traceroot-py"
+        }
+      },
+      {
+        "key": "traceroot.sdk.version",
+        "value": {
+          "stringValue": "0.1.2"
+        }
+      },
+      {
+        "key": "traceroot.span.type",
+        "value": {
+          "stringValue": "llm"
+        }
+      },
+      {
+        "key": "traceroot.span.input",
+        "value": {
+          "stringValue": "{\"messages\": [{\"role\": \"system\", \"content\": \"You are a support agent for a watch shop. Use tools to answer.\"}, {\"role\": \"user\", \"content\": \"Hi, where's my order ORD-1042? I'd like a refund if it's lost.\"}, {\"role\": \"tool\", \"name\": \"lookup_order\", \"content\": \"{\\\"order_id\\\": \\\"ORD-1042\\\", \\\"contact\\\": \\\"sam@example.com\\\", \\\"email\\\": \\\"sam@example.com\\\", \\\"item\\\": \\\"Casio F-91W\\\", \\\"total\\\": 19.99, \\\"status\\\": \\\"delivered\\\"}\"}]}"
+        }
+      },
+      {
+        "key": "traceroot.git.source_file",
+        "value": {
+          "stringValue": "agent.py"
+        }
+      },
+      {
+        "key": "traceroot.git.source_line",
+        "value": {
+          "intValue": "183"
+        }
+      },
+      {
+        "key": "traceroot.git.source_function",
+        "value": {
+          "stringValue": "support_agent"
+        }
+      },
+      {
+        "key": "traceroot.git.repo",
+        "value": {
+          "stringValue": "r7j2grgkfd-lang/traceroot-break-it"
+        }
+      },
+      {
+        "key": "traceroot.span.output",
+        "value": {
+          "stringValue": "{\"text\": \"Order ORD-1042 (Casio F-91W) shows as delivered. We'll email sam@example.com with tracking.\"}"
+        }
+      }
+    ],
+    "status": {},
+    "flags": 256,
+    "resource": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.44.0",
+      "service.instance.id": "ed02d8c8-293d-4dec-aeb8-0c983b110af8",
+      "service.name": "support-agent-demo"
+    }
+  },
+  {
+    "traceId": "33bbaa18959f400873eaa89ae537c095",
+    "spanId": "d40ceaeff6d90635",
+    "name": "support_agent",
+    "kind": "SPAN_KIND_INTERNAL",
+    "startTimeUnixNano": "1790160288328308457",
+    "endTimeUnixNano": "1790160288341222793",
+    "attributes": [
+      {
+        "key": "traceroot.sdk.name",
+        "value": {
+          "stringValue": "traceroot-py"
+        }
+      },
+      {
+        "key": "traceroot.sdk.version",
+        "value": {
+          "stringValue": "0.1.2"
+        }
+      },
+      {
+        "key": "traceroot.span.type",
+        "value": {
+          "stringValue": "agent"
+        }
+      },
+      {
+        "key": "traceroot.span.input",
+        "value": {
+          "stringValue": "{\"question\": \"Hi, where's my order ORD-1042? I'd like a refund if it's lost.\", \"model\": {\"chat\": {\"__wrapped__\": {}}}}"
+        }
+      },
+      {
+        "key": "traceroot.git.source_file",
+        "value": {
+          "stringValue": "agent.py"
+        }
+      },
+      {
+        "key": "traceroot.git.source_line",
+        "value": {
+          "intValue": "223"
+        }
+      },
+      {
+        "key": "traceroot.git.source_function",
+        "value": {
+          "stringValue": "main"
+        }
+      },
+      {
+        "key": "traceroot.git.repo",
+        "value": {
+          "stringValue": "r7j2grgkfd-lang/traceroot-break-it"
+        }
+      },
+      {
+        "key": "traceroot.span.output",
+        "value": {
+          "stringValue": "Order ORD-1042 (Casio F-91W) shows as delivered. We'll email sam@example.com with tracking."
+        }
+      }
+    ],
+    "status": {},
+    "flags": 256,
+    "parentSpanId": "",
+    "resource": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.44.0",
+      "service.instance.id": "ed02d8c8-293d-4dec-aeb8-0c983b110af8",
+      "service.name": "support-agent-demo"
+    }
+  }
+]
