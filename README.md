@@ -117,7 +117,7 @@ There are two bugs here really: the model hallucinated, and the tool trusted it.
 
 ## Companion
 
-[geo-tracker](https://github.com/r7j2grgkfd-lang/geo-tracker) measures which observability tools answer engines cite for 25 agent-debugging questions. TraceRoot's baseline is 0 of 25. Posts like this one are how that number moves.
+[geo-tracker](https://github.com/r7j2grgkfd-lang/geo-tracker) measures which observability tools answer engines cite for 250 real agent-debugging questions. TraceRoot's baseline is 1 of 250. Posts like this one are how that number moves.
 
 ## Honest notes
 
